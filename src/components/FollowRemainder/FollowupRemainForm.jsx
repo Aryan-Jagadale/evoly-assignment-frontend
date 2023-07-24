@@ -19,7 +19,7 @@ const FollowupRemainForm = () => {
   return (
     <>
       <form id="login" onSubmit={handleSubmit}>
-        <div className="">
+        <div className="p-5">
           <div className="mx-auto rounded">
             <div className="xl:w-full border-b border-gray-300 dark:border-gray-700 py-5 bg-white ">
               <div className="flex w-11/12 mx-auto xl:w-full xl:mx-0 items-center">
@@ -83,7 +83,7 @@ const FollowupRemainForm = () => {
             </div>
           </div>
 
-          <div className="container mx-auto w-11/12 xl:w-full">
+          <div className="mx-auto w-11/12 xl:w-full">
             <div className="w-full py-4 sm:px-0   flex justify-end">
               <button className="bg-gray-200 focus:outline-none transition duration-150 ease-in-out hover:bg-gray-300  rounded text-black  px-6 py-2 text-xs mr-4">
                 Cancel
