@@ -20,7 +20,7 @@ const FollowupRemainForm = () => {
     <>
       <form id="login" onSubmit={handleSubmit}>
         <div className="">
-          <div className="container mx-auto rounded">
+          <div className="mx-auto rounded">
             <div className="xl:w-full border-b border-gray-300 dark:border-gray-700 py-5 bg-white ">
               <div className="flex w-11/12 mx-auto xl:w-full xl:mx-0 items-center">
                 <p className="text-lg text-gray-800  font-bold">
