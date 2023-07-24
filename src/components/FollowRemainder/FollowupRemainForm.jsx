@@ -19,7 +19,7 @@ const FollowupRemainForm = () => {
   return (
     <>
       <form id="login" onSubmit={handleSubmit}>
-        <div className="p-5">
+        <div className="p-10">
           <div className="mx-auto rounded">
             <div className="xl:w-full border-b border-gray-300 dark:border-gray-700 py-5 bg-white ">
               <div className="flex w-11/12 mx-auto xl:w-full xl:mx-0 items-center">
