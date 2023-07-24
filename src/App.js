@@ -11,7 +11,7 @@ import FollowupRemainder from "./components/FollowRemainder/FollowupRemainder";
 import FollowupRemainForm from "./components/FollowRemainder/FollowupRemainForm";
 
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
   return (
     <>
       {loading ? (
