@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 import { Toaster } from "react-hot-toast";
-import Loader from "./components/Loader";
-import Sidebar from "./components/Header/Sidebar";
-import Navbar from "./components/Header/Navbar";
+import Loader from "./views/loader/Loader";
+import Sidebar from "./views/header/Sidebar";
+import Navbar from "./views/header/Navbar";
 import { Route, Routes } from "react-router-dom";
-import NotFound from "./components/NotFound";
-import DashBoard from "./components/DashBoard";
-import FollowupRemainder from "./components/FollowRemainder/FollowupRemainder";
-import FollowupRemainForm from "./components/FollowRemainder/FollowupRemainForm";
+import NotFound from "./views/notfound/NotFound";
+import DashBoard from "./views/dashboard/DashBoard";
+import FollowupRemainder from "./views/followreminder/components/FollowupRemainder";
+import FollowupRemainForm from "./views/followreminder/components/FollowupRemainForm";
 
 function App() {
   const [loading] = useState(false);

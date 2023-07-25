@@ -1,19 +1,16 @@
-import React, { useRef } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 
 const FollowupRemainForm = () => {
   const params = useParams();
+
   console.log(params);
-  let form = useRef(null);
+
+  //let form = useRef(null);
+
   const handleSubmit = (event) => {
-    event.preventDefault();
-    const form_data = new FormData(form.current);
-    let payload = {};
-    form_data.forEach(function (value, key) {
-      payload[key] = value;
-    });
-    // console.log("payload", payload);
-    // Place your API call here to submit your payload.
+   
+    event.preventDefault()
   };
   //Fetch from user, Righ now dummy data
   return (
@@ -63,8 +60,8 @@ const FollowupRemainForm = () => {
                     id="username"
                     value={"Re: Order from suresh@gmail.com on Jan 12, 2021"}
                     name="username"
-                    required
-                    className="border border-gray-300 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-indigo-700 bg-transparent placeholder-gray-500 text-black "
+                    
+                    className="border border-gray-300 px-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-indigo-700 bg-transparent placeholder-gray-500 text-black "
                     placeholder="@example"
                   />
                 </div>
@@ -72,7 +69,7 @@ const FollowupRemainForm = () => {
                   <textarea
                     id="about"
                     name="about"
-                    required
+                    
                     className="bg-transparent border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-indigo-700 resize-none placeholder-gray-500 text-gray-500 dark:text-gray-400"
                     placeholder="Message"
                     rows={5}

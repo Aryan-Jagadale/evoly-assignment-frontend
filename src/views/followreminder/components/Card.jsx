@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 
 const Card = ({label,percent}) => {
   return (
@@ -7,7 +7,7 @@ const Card = ({label,percent}) => {
       className="lg:my-8 rounded shadow-sm bg-white border  duration-300 hover:-translate-y-1"
       
     >
-      <Link to="link" className="cursor-pointer">
+      <div>
         <figure>
           <figcaption className="p-4">
             <p
@@ -16,12 +16,12 @@ const Card = ({label,percent}) => {
             >{label}</p>
 
             <small
-              className="leading-5 text-black bold"
+              className="leading-5 font-bold text-black text-xl"
               
             >{percent}%</small>
           </figcaption>
         </figure>
-      </Link>
+      </div>
     </div>
   );
 };

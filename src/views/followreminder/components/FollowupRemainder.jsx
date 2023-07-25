@@ -144,7 +144,7 @@ const FollowupRemainder = () => {
           <tbody className="divide-y divide-gray-100 border-t border-gray-100">
             {/*Table row */}
             {user.map((userInfo) => (
-              <Row key={userInfo.name} userInfo={userInfo} />
+              <Row key={userInfo.id} userInfo={userInfo} />
             ))}
           </tbody>
         </table>

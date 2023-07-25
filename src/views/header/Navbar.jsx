@@ -66,7 +66,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="text-slate-400 hover:text-slate-900 ">
-                  <button className="group relative px-4 py-2 text-sm overflow-hidden rounded-md bg-blue-500  font-bold text-white">
+                  <button className="group relative px-4 py-2 text-sm overflow-hidden rounded-md bg-blue-500  font-bold text-white cursor-not-allowed">
                     Settings
                     <div className="absolute inset-0 h-full w-full scale-0 rounded-md transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
                   </button>
