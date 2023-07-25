@@ -22,7 +22,7 @@ const Dropdown = () => {
       <div className="w-40 mt-2 p-3 bg-white shadow rounded">
         <div className="flex items-center justify-between flex-col">
           <div className="flex items-center">
-            <div className=" flex items-center flex-col">
+            <div className=" flex flex-col">
               {dropDownMenu.map((menu) => (
                 <p
                   key={menu.title}

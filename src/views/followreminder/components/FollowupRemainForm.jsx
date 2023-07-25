@@ -44,7 +44,7 @@ const FollowupRemainForm = () => {
                   
                 </div>
             
-                <p class="underline cursor-pointer text-gray-700 text-sm">
+                <p class="cursor-pointer text-gray-700 text-sm">
                  Order History
                 </p>
               

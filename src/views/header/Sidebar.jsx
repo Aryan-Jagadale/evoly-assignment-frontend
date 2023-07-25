@@ -40,7 +40,7 @@ const Sidebar = () => {
               !open && "scale-0"
             }`}
           >
-            Assignment
+            Sellerkin
           </h1>
         </Link>
       </div>
@@ -52,7 +52,6 @@ const Sidebar = () => {
             className={`flex  rounded-md p-2 font-medium cursor-pointer hover:bg-gray-100 text-slate-500 hover:text-slate-900   text-base items-center gap-x-4 
               ${Menu.gap ? "mt-9" : "mt-2"} ${
               index === 0 && "bg-light-white"
-              
             } `}
           >
             <Link to={Menu.link}>

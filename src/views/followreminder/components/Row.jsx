@@ -6,7 +6,7 @@ import Dropdown from "./Dropdown";
 
 const Row = ({ userInfo }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [menuVisible, setMenuVisible] = useState(false);
+  const [menuVisible, setMenuVisible] = useState(true);
 
   const { id, name, email, orderId, date, review, status } = userInfo;
 
@@ -21,7 +21,10 @@ const Row = ({ userInfo }) => {
     <tr
       className="hover:bg-gray-50"
       onMouseEnter={() => setIsVisible(true)}
-      onMouseLeave={() => setIsVisible(false)}
+      onMouseLeave={() => {
+        setIsVisible(false);
+        setMenuVisible(false);
+      }}
     >
       <th className="flex gap-3 px-6 py-4 font-normal text-gray-900">
         <div className="relative h-10 w-10">
