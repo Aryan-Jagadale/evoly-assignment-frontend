@@ -5,7 +5,7 @@ import Tooltip from "../followreminder/components/Tooltip";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
-  const [tooltipVisible, setTooltipVisible] = useState(true);
+  const [tooltipVisible, setTooltipVisible] = useState(false);
 
   return (
     <>
