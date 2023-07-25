@@ -1,20 +1,20 @@
 const Dropdown = () => {
   const dropDownMenu = [
     {
-      title: "Mark as complete",
+      label: "Mark as complete",
     },
     {
-      title: "Mark as send now",
+      label: "Mark as send now",
     },
 
     {
-      title: "Ignore",
+      label: "Ignore",
     },
     {
-      title: "Copy Message",
+      label: "Copy Message",
     },
     {
-      title: "View order",
+      label: "View order",
     },
   ];
   return (
@@ -25,10 +25,10 @@ const Dropdown = () => {
             <div className=" flex flex-col">
               {dropDownMenu.map((menu) => (
                 <p
-                  key={menu.title}
+                  key={menu.label}
                   className="text-sm leading-normal text-left text-gray-500 py-2 cursor-pointer"
                 >
-                  {menu.title}
+                  {menu.label}
                 </p>
               ))}
             </div>

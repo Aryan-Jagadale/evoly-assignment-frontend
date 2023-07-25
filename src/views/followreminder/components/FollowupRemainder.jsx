@@ -1,43 +1,10 @@
 import React from "react";
 import Row from "./Row";
 import Card from "./Card";
-
+import Filter from "./Filter";
 
 const FollowupRemainder = () => {
-  const optionsList = [
-    {
-      id: 1,
-      label: "All Orders",
-      total: 16,
-      value: "All Orders",
-    },
-    {
-      id: 2,
-      label: "Ignored",
-      value: "Ignored",
-      total: 4,
-    },
-    {
-      id: 3,
-      label: "Scheduled",
-      value: "Scheduled",
-      total: 0,
-    },
-    {
-      id: 4,
-      label: "Send Now",
-      value: "Send Now",
-
-      total: 6,
-    },
-    {
-      id: 5,
-      label: "Completed",
-      value: "Completed",
-
-      total: 6,
-    },
-  ];
+ 
 
   const user = [
     {
@@ -101,26 +68,9 @@ const FollowupRemainder = () => {
         {/*Follow up Title */}
         <div className="bg-white flex items-center font-medium px-6 py-4 justify-between">
           <h2 className="  text-gray-900">Follow up</h2>
-          <span>
-            Filter:{" "}
-            <select
-              className="text-sm cursor-pointer text-black  px-6 outline-none"
-              //className="text-sm leading-normal text-left text-gray-500 py-2 cursor-pointer"
-            >
-              {optionsList.map((option) => (
-                <option
-                  key={option.id}
-                  className="text-sm leading-normal text-left text-gray-500 py-2 px-3 cursor-pointer"
-                  value={option.label}
-                >
-                <p className="py-2">
-                {option.label} ({option.total})
-                </p>
-                
-                </option>
-              ))}
-              </select>
-              
+          <span className="flex gap-2">
+            Filter:{" "} <Filter/>
+            
           </span>
         </div>
 
