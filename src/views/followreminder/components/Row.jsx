@@ -66,13 +66,13 @@ const Row = ({ userInfo }) => {
         >
           <div>
             <BiEdit
-              className="h-4 w-4 cursor-pointer"
+              className="h-5 w-5 cursor-pointer"
               onClick={() => setMenuVisible(!menuVisible)}
             />
           </div>
           {menuVisible && <Dropdown />}
           <Link to="/followup-reminder">
-            <BsThreeDotsVertical className="h-4 w-4" />
+            <BsThreeDotsVertical className="h-5 w-5" />
           </Link>
         </div>
       </td>
