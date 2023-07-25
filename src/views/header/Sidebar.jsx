@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import control from "../../images/control.png";
 import logo from "../../images/logo.svg";
 import { MdSpaceDashboard, MdOutlineChatBubbleOutline } from "react-icons/md";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
+  const location =useLocation()
 
   const menus = [
     { title: "Dashboard", src: <MdSpaceDashboard />, link: "/" },
@@ -14,12 +15,16 @@ const Sidebar = () => {
       src: <MdOutlineChatBubbleOutline />,
       link: "/followup-reminder",
     },
+
+    
   ];
+  const active = "text-slate-900 bg-gray-200"
+
   return (
     <div
       className={` ${
         open ? "w-72" : "w-20 "
-      } p-5  pt-8 relative border-r-2 duration-300`}
+      } p-5  pt-8 relative border-r-2 duration-300 bg-white`}
     >
       <img
         src={control}
@@ -51,7 +56,7 @@ const Sidebar = () => {
             key={index}
             className={`flex  rounded-md p-2 font-medium cursor-pointer hover:bg-gray-100 text-slate-500 hover:text-slate-900   text-base items-center gap-x-4 
               ${Menu.gap ? "mt-9" : "mt-2"} ${
-              index === 0 && "bg-light-white"
+              Menu.link === location.pathname && `bg-light-white ${active}`
             } `}
           >
             <Link to={Menu.link}>
