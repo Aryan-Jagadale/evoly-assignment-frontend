@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+
 import { AiOutlineInfoCircle } from "react-icons/ai";
+import Tooltip from "../followreminder/components/Tooltip";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
+  const [tooltipVisible, setTooltipVisible] = useState(true);
 
   return (
     <>
@@ -17,7 +19,7 @@ const Navbar = () => {
                   onClick={() => setNavbar(!navbar)}
                 >
                   {navbar ? (
-                    <>
+                    
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="w-6 h-6"
@@ -30,9 +32,9 @@ const Navbar = () => {
                           clipRule="evenodd"
                         />
                       </svg>
-                    </>
+                    
                   ) : (
-                    <>
+                    
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="w-6 h-6"
@@ -47,7 +49,7 @@ const Navbar = () => {
                           d="M4 6h16M4 12h16M4 18h16"
                         />
                       </svg>
-                    </>
+                    
                   )}
                 </button>
               </div>
@@ -60,10 +62,18 @@ const Navbar = () => {
               }`}
             >
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                <li className=" text-slate-500 hover:text-slate-900  ">
-                  <Link to="/">
-                    <AiOutlineInfoCircle />
-                  </Link>
+                <li className=" text-slate-500 hover:text-slate-900 relative">
+                  <div
+                    onMouseEnter={() => setTooltipVisible(true)}
+                    onMouseLeave={() => {
+                      setTooltipVisible(false);
+                    }}
+                  >
+                    <AiOutlineInfoCircle className="cursor-pointer" />
+                  </div>
+                  {
+                    tooltipVisible && <Tooltip/>
+                  }
                 </li>
                 <li className="text-slate-400 hover:text-slate-900 ">
                   <button className="group relative px-4 py-2 text-sm overflow-hidden rounded-md bg-blue-500  font-bold text-white cursor-not-allowed">
@@ -76,7 +86,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <hr className="w-4/5 mx-auto h-[1px] border bg-black"/>
+      <hr className="w-4/5 mx-auto h-[1px] border bg-black" />
     </>
   );
 };

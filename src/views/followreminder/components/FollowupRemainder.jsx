@@ -2,31 +2,39 @@ import React from "react";
 import Row from "./Row";
 import Card from "./Card";
 
+
 const FollowupRemainder = () => {
   const optionsList = [
     {
       id: 1,
-      name: "All Orders",
+      label: "All Orders",
       total: 16,
+      value: "All Orders",
     },
     {
       id: 2,
-      name: "Ignored",
+      label: "Ignored",
+      value: "Ignored",
       total: 4,
     },
     {
       id: 3,
-      name: "Scheduled",
+      label: "Scheduled",
+      value: "Scheduled",
       total: 0,
     },
     {
       id: 4,
-      name: "Send Now",
+      label: "Send Now",
+      value: "Send Now",
+
       total: 6,
     },
     {
       id: 5,
-      name: "Completed",
+      label: "Completed",
+      value: "Completed",
+
       total: 6,
     },
   ];
@@ -83,18 +91,10 @@ const FollowupRemainder = () => {
     <div>
       {/*Card */}
       <div className="grid gap-8 px-4 text-neutral-600 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-      
-      <Card label={"Review rate"} percent={12.27}/>
-      <Card label={"Review score"} percent={5.5}/>
-      <Card label={"Total reviews"} percent={58.27}/>
-      <Card label={"Send now"} percent={2}/>
-
-      
-      
-      
-      
-      
-      
+        <Card label={"Review rate"} percent={12.27} />
+        <Card label={"Review score"} percent={5.5} />
+        <Card label={"Total reviews"} percent={58.27} />
+        <Card label={"Send now"} percent={2} />
       </div>
 
       <div className="overflow-x-scroll md:overflow-auto rounded-lg border border-gray-200 shadow m-5">
@@ -103,17 +103,24 @@ const FollowupRemainder = () => {
           <h2 className="  text-gray-900">Follow up</h2>
           <span>
             Filter:{" "}
-            <select className="text-sm cursor-pointer text-black  px-6 outline-none">
+            <select
+              className="text-sm cursor-pointer text-black  px-6 outline-none"
+              //className="text-sm leading-normal text-left text-gray-500 py-2 cursor-pointer"
+            >
               {optionsList.map((option) => (
                 <option
                   key={option.id}
-                  className="p-1 cursor-pointer text-gray-500"
-                  value={option.name}
+                  className="text-sm leading-normal text-left text-gray-500 py-2 px-3 cursor-pointer"
+                  value={option.label}
                 >
-                  {option.name} ({option.total})
+                <p className="py-2">
+                {option.label} ({option.total})
+                </p>
+                
                 </option>
               ))}
-            </select>
+              </select>
+              
           </span>
         </div>
 
